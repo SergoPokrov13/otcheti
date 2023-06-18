@@ -1,0 +1,120 @@
+.Main {
+    margin: 55px 0 0 95px;
+}
+
+.main__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    margin: 0;
+    color: #282828;
+}
+
+.main__subtitle {
+    margin: 5px 0 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #282828;
+}
+
+.main__button_list {
+    display: flex;
+    margin: 35px 0 0;
+}
+
+.main__button_measurers {
+    background-image: url(../../img/measurers.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 125px;
+    padding: 0;
+    border: none;
+    margin: 0 55px 0 0;
+    border-radius: 15px;
+}
+
+.main__button_managers {
+    background-image: url(../../img/managers.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 125px;
+    padding: 0;
+    border: none;
+    margin: 0 55px 0 0;
+    border-radius: 15px;
+}
+
+.main__button_assembly {
+    background-image: url(../../img/assembly.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 380px;
+    height: 125px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.block {
+    margin: 57px 0 0;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    margin: 0;
+    color: #282828;
+
+}
+
+.list {
+    width: 100%;
+    margin: 31px 0 0;
+    background-color: #FAFAFA;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name_people {
+    margin: 37px 0 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #282828;
+    text-align: left;
+}
+
+.name_people-active {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    width: 340px;
+    height: 62px;
+    background-color: #9ACF59;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

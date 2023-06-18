@@ -1,0 +1,8 @@
+@import url(../../fonts/fonts.css);
+
+.app{
+    margin: 0 auto;
+    padding: 0;
+    background: #FFFFFF;
+    max-width: 1440px;
+}
