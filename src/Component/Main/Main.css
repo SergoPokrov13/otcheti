@@ -1,7 +1,6 @@
 .Main {
-    margin: 55px 0 0 95px;
+    margin: 55px auto;
 }
-
 .main__title {
     font-family: 'Inter';
     font-style: normal;
@@ -11,7 +10,6 @@
     margin: 0;
     color: #282828;
 }
-
 .main__subtitle {
     margin: 5px 0 0;
     font-family: 'Inter';
@@ -21,12 +19,10 @@
     line-height: 58px;
     color: #282828;
 }
-
 .main__button_list {
     display: flex;
     margin: 35px 0 0;
 }
-
 .main__button_measurers {
     background-image: url(../../img/measurers.svg);
     background-position: center;
@@ -38,7 +34,6 @@
     margin: 0 55px 0 0;
     border-radius: 15px;
 }
-
 .main__button_managers {
     background-image: url(../../img/managers.svg);
     background-position: center;
@@ -50,7 +45,6 @@
     margin: 0 55px 0 0;
     border-radius: 15px;
 }
-
 .main__button_assembly {
     background-image: url(../../img/assembly.svg);
     background-position: center;
@@ -62,7 +56,6 @@
     margin: 0;
     border-radius: 15px;
 }
-
 .block {
     margin: 57px 0 0;
     max-width: 380px;
@@ -70,7 +63,6 @@
     flex-direction: column;
     align-items: center;
 }
-
 .title {
     font-family: 'Inter';
     font-style: normal;
@@ -79,9 +71,7 @@
     line-height: 39px;
     margin: 0;
     color: #282828;
-
 }
-
 .list {
     width: 100%;
     margin: 31px 0 0;
@@ -90,8 +80,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 0 50px 0;
 }
-
 .name_people {
     margin: 37px 0 0;
     font-family: 'Inter';
@@ -102,7 +92,6 @@
     color: #282828;
     text-align: left;
 }
-
 .name_people-active {
     font-family: 'Inter';
     font-style: normal;
@@ -117,4 +106,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.section{
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+}
+.block-two{
+    margin: 50px 0 0;
+}
+.button-schedule{
+    width: 179px;
+    height: 58px;
+    background: #FACC5C;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 20px 0 0;
+}
+.button-table{
+    width: 179px;
+    height: 58px;
+    background: #9ACF59;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
 }

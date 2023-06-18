@@ -39,11 +39,17 @@ function Main() {
         <button className='main__button_managers' onClick={()=>setGroup('managers')} type='button'></button>
         <button className='main__button_assembly' onClick={()=>setGroup('assembly')} type='button'></button>
       </div>
+      <div className='section'>
       <div className='block'>
         <p className='title'>{data[group].title}</p>
         <div className='list'>
           {data[group].users.map((el)=>( <p className='name_people'>{el.id}.{el.name}</p>))}
         </div>
+      </div>
+      <div className='block-two'>
+          <button className='button-schedule' type='button'>График</button>
+          <button className='button-table' type='button'>Таблица</button>
+      </div>
       </div>
     </div>
   );
