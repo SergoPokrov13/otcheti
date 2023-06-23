@@ -1,6 +1,7 @@
 import './Main.css';
 import '../../fonts/fonts.css'
-import Example from '../Grafik/Grafik';
+import Grafik from '../Grafik/Grafik';
+import Table from '../Table/Table';
 import { useState } from 'react';
 function Main() {
   const [data, setData] = useState(
@@ -28,7 +29,8 @@ function Main() {
     }
   )
   const [group, setGroup] = useState('measurers')
-
+  
+  const [isActive, setIsActive] = useState(false)
 
 
   return (
@@ -49,11 +51,14 @@ function Main() {
         </div>
         <div className='block-two'>
           <div className='block-buttons'>
-            <button className='button-schedule button' type='button'>График</button>
-            <button className='button-table button' type='button'>Таблица</button>
+            <button className='button-schedule button' onClick={()=>{setIsActive(false)}} type='button'>График</button>
+            <button className='button-table button' onClick={()=>{setIsActive(true)}} type='button'>Таблица</button>
           </div>
           <div className='block-result'>
-              <Example/>
+              {isActive ? 
+              <Table/>
+              :
+              <Grafik/>}
           </div>
         </div>
       </div>

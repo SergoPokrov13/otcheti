@@ -1,43 +1,24 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {data} from '../../utils/constants';
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 100,
-    pv: 70,
-  },
-  {
-    name: 'Page B',
-    uv: 400,
-    pv: 50,
-  },
-  {
-    name: 'Page C',
-    uv: 10,
-    pv: 90,
-  },
-  {
-    name: 'Page D',
-    uv: 10,
-    pv: 90,
-  },
-];
-
-let arr = data.map((el)=>{
-    return [el]
-  });
-export default class Example extends PureComponent {
+// let arr = data.map((el)=>{
+//     console.log(el.answers[0].count);
+//     return [el];
+//   });
+export default class Grafik extends PureComponent {
   
   render() {
-    return (arr.map((el)=><ResponsiveContainer width="100%" height="100%">
+    return (data.map((el)=>
+    <ResponsiveContainer width="100%" height="100%">
+        {console.log(el)}
         <BarChart
          layout="vertical"
-          width={300}
+          width={250}
           height={300}
           data={el}
           margin={{
-            top: 25,
+            top: 0,
             right: 0,
             left: 0,
             bottom: 0,
@@ -45,10 +26,11 @@ export default class Example extends PureComponent {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" hide/>
-          <YAxis dataKey="name" type='category'/>
+          <YAxis dataKey={el.answers[0].title} type='category'/>
           <Legend/>
-          <Bar dataKey="pv" stackId="a" fill="#8884d8"/>
-          <Bar dataKey="uv" stackId="b" fill="#82ca9d" />
+          <Bar dataKey={el.answers[0].count} stackId="a" fill="#9ACF59"/>
+          <Bar dataKey={el.answers[0].count} stackId="b" fill="#A09AFD" />
+          <Bar dataKey={el.answers[0].count} stackId="c" fill="#FACC5C" />
         </BarChart>
       </ResponsiveContainer>)
       
