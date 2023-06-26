@@ -1,61 +1,39 @@
-import { MaterialReactTable } from 'material-react-table';
-import React, { useMemo } from 'react';
-import  {data}  from '../../utils/constants';
-
-export const Example = () => {
-    const columns = useMemo(
-        () => [
-          {
-            accessorKey: 'one',
-            header: 'Вопрос 1',
-          },
-          {
-            accessorKey: 'two',
-            header: 'Вопрос 2',
-          },
-          {
-            accessorKey: 'three',
-            header: 'Вопрос 3',
-          },
-          {
-            accessorKey: 'four',
-            header: 'Вопрос 4',
-          },
-        ],
-        [],
-        );
-  return (
-    <MaterialReactTable
-      columns={columns}
-      data={data}
-      enableColumnActions={false}
-      enableColumnFilters={false}
-      enablePagination={false}
-      enableSorting={false}
-      enableBottomToolbar={false}
-      enableTopToolbar={false}
-      rowNumberMode="static"
-      muiTableBodyRowProps={{ hover: true }}
-      muiTableProps={{
-        sx: {
-          border: '1px solid black',
-          width: '30%',
-        },
-      }}
-      muiTableHeadCellProps={{
-        sx: {
-          border: '1px solid black',
-          width: '150px',
-        },
-      }}
-      muiTableBodyCellProps={{
-        sx: {
-          border: '1px solid black',
-          width: '150px',   
-        },
-      }}
-    />
+export const Table = (data) => {
+  console.log(data)
+    return (
+      <div className='table__block'>
+      <>
+        {data.data.map((el) => {
+          return (
+            <table>
+            <thead>
+              <tr>
+                <th>{el.title}</th>
+                <th>Количество</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{el.answers[0].title}</td>
+                <td className='znach'>{el.answers[0].count}</td>
+              </tr>
+              <tr>
+                <td>{el.answers[1].title}</td>
+                <td className='znach'>{el.answers[1].count}</td>
+              </tr>
+              <tr>
+                <td>{el.answers[2].title}</td>
+                <td className='znach'>{el.answers[2].count}</td>
+              </tr>
+            </tbody>
+          </table>
+          );
+        })}
+      </>
+      </div>
   );
 };
 
-export default Example;
+export default Table;
+
+
